@@ -4,7 +4,7 @@ VERSION:2.0
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
-UID:ical-bd72466d-2d6d-4cb6-9882-fc20ceb25f20
+UID:ical-5dc57bf7-4f19-498a-b2bb-1c9511c28217
 DTSTART;TZID=America/Los_Angeles:20240805T103000
 DTEND;TZID=America/Los_Angeles:20240805T122000
 SUMMARY:Jacob Bien, Anna Neufeld, Lihua Lei: [Discussion] 'JASA Theory and Methods Invited Session'
@@ -12,7 +12,7 @@ LOCATION:CC-254
 DESCRIPTION:Authors: Jacob Bien, Anna Neufeld, Lihua Lei\nSession: <a href='https://ww3.aievolution.com/JSMAnnual2024/Events/viewEv?ev=1696' target='_blank'>JASA Theory and Methods Invited Session</a> (Invited Paper Session)\nChair: Dylan Small
 END:VEVENT
 BEGIN:VEVENT
-UID:ical-77f7f4cb-d79b-4919-9281-4958d51d29aa
+UID:ical-0ffd7f23-8fce-4930-8d50-2ce62187033c
 DTSTART;TZID=America/Los_Angeles:20240805T105500
 DTEND;TZID=America/Los_Angeles:20240805T111500
 SUMMARY:Irina Gaynanova: Hierarchical Nuclear Norm Penalization for Multi-view Data Integration
@@ -20,7 +20,7 @@ LOCATION:CC-E142
 DESCRIPTION:Authors: Irina Gaynanova, Sangyoon Yi, Raymond Wong\nSession: <a href='https://ww3.aievolution.com/JSMAnnual2024/Events/viewEv?ev=1316' target='_blank'>New Frontiers in Data Integration</a> (Invited Paper Session)\nChair: Sarah Samorodnitsky
 END:VEVENT
 BEGIN:VEVENT
-UID:ical-e9db8274-78e2-492a-aa5c-e02e642b7b7d
+UID:ical-75ad1735-e45e-4a5a-86fa-bf119064b8fd
 DTSTART;TZID=America/Los_Angeles:20240805T110000
 DTEND;TZID=America/Los_Angeles:20240805T112500
 SUMMARY:Ryan Tibshirani: Opportunities and Challenges in Auxiliary Surveillance for Public Health the United States
@@ -28,7 +28,7 @@ LOCATION:CC-255
 DESCRIPTION:Authors: Ryan Tibshirani\nSession: <a href='https://ww3.aievolution.com/JSMAnnual2024/Events/viewEv?ev=1062' target='_blank'>To Predict (and to prevent) a Pandemic: Advances in Infectious Disease Tracking with Digital Data</a> (Invited Paper Session)\nChair: Shaoyang Ning
 END:VEVENT
 BEGIN:VEVENT
-UID:ical-0dc4ff30-d2b2-4620-88c4-2d8923dc72b4
+UID:ical-fe838473-1feb-4f21-b136-f75fd2139f8c
 DTSTART;TZID=America/Los_Angeles:20240805T140500
 DTEND;TZID=America/Los_Angeles:20240805T154000
 SUMMARY:Robert Tibshirani: Cooperative learning and cooperative components analysis
@@ -36,7 +36,7 @@ LOCATION:CC-E142
 DESCRIPTION:Authors: Robert Tibshirani\nSession: <a href='https://ww3.aievolution.com/JSMAnnual2024/Events/viewEv?ev=1638' target='_blank'>WNAR 2024 Research Impact Award Lecture</a> (Invited Paper Session)\nChair: Megan Othus
 END:VEVENT
 BEGIN:VEVENT
-UID:ical-2289ea97-1fb4-4565-98a2-ad0c4257c15c
+UID:ical-32402ac6-7fb4-4b16-9810-1df04d3e2e35
 DTSTART;TZID=America/Los_Angeles:20240805T140500
 DTEND;TZID=America/Los_Angeles:20240805T142500
 SUMMARY:Anna Neufeld: Data thinning to avoid double dipping, with applications to single-cell RNA sequencing data
@@ -44,7 +44,7 @@ LOCATION:CC-B119
 DESCRIPTION:Authors: Anna Neufeld\nSession: <a href='https://ww3.aievolution.com/JSMAnnual2024/Events/viewEv?ev=2277' target='_blank'>Harnessing Multiple Genomic Features to Identify Disease Biomarkers</a> (Topic-Contributed Paper Session)\nChair: Ananda Sen
 END:VEVENT
 BEGIN:VEVENT
-UID:ical-edeb2b3d-64de-4870-8163-0cbb559bdf79
+UID:ical-418d5ff5-7af4-40e9-9804-1e87f5fd1afd
 DTSTART;TZID=America/Los_Angeles:20240806T085500
 DTEND;TZID=America/Los_Angeles:20240806T091500
 SUMMARY:Evan Ray: Flusion: Integrating Multiple Data Sources for Accurate Influenza Predictions
@@ -52,7 +52,7 @@ LOCATION:CC-257
 DESCRIPTION:Authors: Evan Ray\nSession: <a href='https://ww3.aievolution.com/JSMAnnual2024/Events/viewEv?ev=1524' target='_blank'>Statistical Advances in Surveillance, Analysis and Forecasting of Emerging Infectious Diseases</a> (Invited Paper Session)\nChair: Yang Yang
 END:VEVENT
 BEGIN:VEVENT
-UID:ical-d458b07f-5829-485c-8775-d5cbb452fb52
+UID:ical-ecb8c68f-1201-4459-bdc9-3921f55809be
 DTSTART;TZID=America/Los_Angeles:20240806T095500
 DTEND;TZID=America/Los_Angeles:20240806T101500
 SUMMARY:Aditya Mishra: TARO: Tree aggregated factor regression for microbiome data integration
@@ -60,7 +60,7 @@ LOCATION:CC-F152
 DESCRIPTION:Authors: Aditya Mishra\nSession: <a href='https://ww3.aievolution.com/JSMAnnual2024/Events/viewEv?ev=1824' target='_blank'>Integrative Statistical Approaches for Omics Data Unveiling</a> (Topic-Contributed Paper Session)\nChair: Qiwei Li
 END:VEVENT
 BEGIN:VEVENT
-UID:ical-d2622a1c-f763-4ce0-ae84-10f7229ff6e7
+UID:ical-fe7b0b19-a9a2-4b55-93f2-2ae467ebe9a3
 DTSTART;TZID=America/Los_Angeles:20240806T103500
 DTEND;TZID=America/Los_Angeles:20240806T110000
 SUMMARY:Luo Xiao: Functional Data Methods with Informative Observation Process
@@ -68,7 +68,7 @@ LOCATION:CC-C122
 DESCRIPTION:Authors: Luo Xiao\nSession: <a href='https://ww3.aievolution.com/JSMAnnual2024/Events/viewEv?ev=1237' target='_blank'>Methods for Functional Data Analysis of Wearable Device and Biomedical Imaging Data</a> (Invited Paper Session)\nChair: Julia Wrobel
 END:VEVENT
 BEGIN:VEVENT
-UID:ical-98cfa6a0-ef3d-43cd-8eab-f15555922db3
+UID:ical-68e9a1d9-d84c-4cc1-bebd-d593adbfa3d4
 DTSTART;TZID=America/Los_Angeles:20240806T112500
 DTEND;TZID=America/Los_Angeles:20240806T115000
 SUMMARY:Sumanta Basu: Impulse Response Estimation in Large-scale Time Series
@@ -76,7 +76,7 @@ LOCATION:CC-B110
 DESCRIPTION:Authors: Sumanta Basu\nSession: <a href='https://ww3.aievolution.com/JSMAnnual2024/Events/viewEv?ev=1093' target='_blank'>Modern Methods in Time Series and Econometrics</a> (Invited Paper Session)\nChair: Seyed Yaser Samadi
 END:VEVENT
 BEGIN:VEVENT
-UID:ical-e3c66512-1282-49aa-9f1b-152b3f128a2b
+UID:ical-733dec64-4f43-4201-93fc-2d082987d128
 DTSTART;TZID=America/Los_Angeles:20240807T110000
 DTEND;TZID=America/Los_Angeles:20240807T112500
 SUMMARY:Ali Shojaie: Nonparametric Sequential Change-point Detection for High-dimensional Streaming Data
@@ -84,7 +84,7 @@ LOCATION:CC-B112
 DESCRIPTION:Authors: Ali Shojaie\nSession: <a href='https://ww3.aievolution.com/JSMAnnual2024/Events/viewEv?ev=1679' target='_blank'>Recent Advances in Nonparametric Methods with Applications in Change-point Analysis</a> (Invited Paper Session)\nChair: Likai Chen
 END:VEVENT
 BEGIN:VEVENT
-UID:ical-195bdb37-bea5-46a3-8c3b-bacedd042079
+UID:ical-b2a84695-d260-4daf-8690-a72b63cf122f
 DTSTART;TZID=America/Los_Angeles:20240807T160500
 DTEND;TZID=America/Los_Angeles:20240807T175000
 SUMMARY:Robert Tibshirani: Pre-training and the Lasso

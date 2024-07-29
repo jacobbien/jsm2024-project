@@ -14,23 +14,24 @@ get_talks <- function(speakers, authors, people, keywords, days, session_types) 
   if (!missing(speakers)) {
     pattern <- paste(speakers, collapse = "|") %>% 
       stringr::str_replace("\\(", "\\\\(") %>% # escape parentheses in names
-      stringr::str_replace("\\)", "\\\\)") 
-    talks <- talks %>% dplyr::filter(stringr::str_detect(.data$speaker, pattern))
+      stringr::str_replace("\\)", "\\\\)")
+    if (!(pattern %in% c("", "NA")))
+      talks <- talks %>% dplyr::filter(stringr::str_detect(.data$speaker, pattern))
   }
   if (!missing(authors)) {
-    if (authors != "") {
-      pattern <- paste(authors, collapse = "|") %>% 
-        stringr::str_replace("\\(", "\\\\(") %>% # escape parentheses in names
-        stringr::str_replace("\\)", "\\\\)")
+    pattern <- paste(authors, collapse = "|") %>% 
+      stringr::str_replace("\\(", "\\\\(") %>% # escape parentheses in names
+      stringr::str_replace("\\)", "\\\\)")
+    if (!(pattern %in% c("", "NA")))
       talks <- talks %>% dplyr::filter(stringr::str_detect(.data$author, pattern))
-    }
   }
   if (!missing(people)) {
     pattern <- paste(people, collapse = "|") %>% 
       stringr::str_replace("\\(", "\\\\(") %>% # escape parentheses in names
       stringr::str_replace("\\)", "\\\\)")
-    talks <- talks %>% 
-      dplyr::filter(
+    if (!(pattern %in% c("", "NA")))
+      talks <- talks %>% 
+        dplyr::filter(
         stringr::str_detect(.data$author, pattern) |
           stringr::str_detect(.data$speaker, pattern) |
           stringr::str_detect(.data$chair, pattern)
@@ -38,18 +39,18 @@ get_talks <- function(speakers, authors, people, keywords, days, session_types) 
   }
   if (!missing(keywords)) {
     pattern <- paste(tolower(keywords), collapse = "|")
-    if (pattern != "") {
+    if (!(pattern %in% c("", "NA")))
       talks <- talks %>% 
         dplyr::filter(stringr::str_detect(tolower(.data$title), pattern))
-    }
   }
   if (!missing(days)) {
     talks <- talks %>% dplyr::filter(.data$day %in% days)
   }
   if (!missing(session_types)) {
     pattern <- paste(tolower(session_types), collapse = "|")
-    talks <- talks %>% 
-      dplyr::filter(stringr::str_detect(tolower(.data$session_type), pattern))
+    if (!(pattern %in% c("", "NA")))
+      talks <- talks %>%
+        dplyr::filter(stringr::str_detect(tolower(.data$session_type), pattern))
   }
   talks %>% dplyr::arrange(.data$start_time)
 }
