@@ -24,5 +24,5 @@ get_out_citations <- function(name, augment = FALSE) {
     # start with author's own cites and follow with those of coauthors:
     ii_cites <- c(ii_cites, setdiff(ii_coa_cites, ii_cites))
   }
-  jsm2024::authors[ii_cites]
+  intersect(jsm2024::authors[ii_cites], jsm2024::authors2024)
 }

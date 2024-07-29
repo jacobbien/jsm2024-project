@@ -330,21 +330,17 @@ usethis::use_import_from("Matrix", "Matrix")
 "authors"
 ```
 
-Let's have a separate character vector of authors for this year's JSM:
+We have a separate character vector of authors for this year's JSM:
 
 ```{r}
-authors2024 <- jsm2024::talks %>%
-  pull(author) %>%
-  str_split(", ") %>%
-  unlist() %>%
-  unique() %>% 
-  sort()
+authors2024 <- jsm$authors_thisyear
 ```
 
+We will want to have precomputed recommendations available for everyone in `authors`.  This combines everyone who has appeared on the JSM program 2022-2024.  However, we want these recommendations to be about only those people who are actually giving talks in 2024.  (E.g., it's not useful to see the name of a coauthor of mine if they aren't presenting at JSM this year!)
 
 ```{r}
 #' JSM 2024 author names
-#' @format A character vector of 5,820 JSM author names
+#' @format A character vector of 5,816 JSM 2024 author names
 #' @source This data was from the JSM 2024 program.
 "authors2024"
 ```
@@ -445,7 +441,7 @@ get_coauthors <- function(name) {
     return(character(0))
   }
   ii_coa <- ordered_nz(jsm2024::coauthor[ii, ])
-  jsm2024::authors[ii_coa]
+  intersect(jsm2024::authors[ii_coa], jsm2024::authors2024)
 }
 ```
 
@@ -482,7 +478,7 @@ get_out_citations <- function(name, augment = FALSE) {
     # start with author's own cites and follow with those of coauthors:
     ii_cites <- c(ii_cites, setdiff(ii_coa_cites, ii_cites))
   }
-  jsm2024::authors[ii_cites]
+  intersect(jsm2024::authors[ii_cites], jsm2024::authors2024)
 }
 ```
 
@@ -512,7 +508,7 @@ get_in_citations <- function(name, augment = FALSE) {
     # start with author's own cites and follow with those of coauthors:
     ii_cites <- c(ii_cites, setdiff(ii_coa_cites, ii_cites))
   }
-  jsm2024::authors[ii_cites]
+  intersect(jsm2024::authors[ii_cites], jsm2024::authors2024)
 }
 ```
 
