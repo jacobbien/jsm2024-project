@@ -636,10 +636,27 @@ usethis::use_import_from("Matrix", "Matrix")</code></pre>
 <pre><code>## ✔ Adding '@importFrom Matrix Matrix' to 'R/jsm2024-package.R'
 ## ✔ Writing 'NAMESPACE'</code></pre>
 <pre class="r"><code>#' JSM author names
-#' @format A character vector of 12,628 JSM author names
+#' @format A character vector of 12,628 names from past and present JSMs
 #' @source This data was from the JSM 2022-2024 programs.
 "authors"</code></pre>
 <pre><code>## [1] "authors"</code></pre>
+<p>Let’s have a separate character vector of authors for this year’s
+JSM:</p>
+<pre class="r"><code>authors2024 &lt;- jsm2024::talks %&gt;%
+  pull(author) %&gt;%
+  str_split(", ") %&gt;%
+  unlist() %&gt;%
+  unique() %&gt;% 
+  sort()</code></pre>
+<pre class="r"><code>#' JSM 2024 author names
+#' @format A character vector of 5,820 JSM author names
+#' @source This data was from the JSM 2024 program.
+"authors2024"</code></pre>
+<pre><code>## [1] "authors2024"</code></pre>
+<p>Let’s send this to the package:</p>
+<pre class="r"><code>usethis::use_data(authors2024)</code></pre>
+<pre><code>## ✔ Saving 'authors2024' to 'data/authors2024.rda'
+## • Document your data (see 'https://r-pkgs.org/data.html')</code></pre>
 <pre class="r"><code>#' Coauthorship information on JSM authors
 #' 
 #' A coauthorship matrix.  Element ij gives a numerical measure of how much
@@ -878,6 +895,7 @@ usethis::use_import_from("Matrix", "Matrix")</code></pre>
 ## ℹ Loading jsm2024
 ## Writing 'NAMESPACE'
 ## Writing 'authors.Rd'
+## Writing 'authors2024.Rd'
 ## Writing 'cites.Rd'
 ## Writing 'coauthor.Rd'
 ## Writing 'export_calendar_to_csv.Rd'
@@ -970,7 +988,11 @@ that we can have a link to it on our pkgdown site.</p>
 ## Reading LICENSE.md
 ## Writing `404.html`
 ## ── Building function reference ─────────────────────────────────────────────────
+## Writing `reference/index.html`
 ## Reading man/authors.Rd
+## Writing `reference/authors.html`
+## Reading man/authors2024.Rd
+## Writing `reference/authors2024.html`
 ## Reading man/cites.Rd
 ## Reading man/coauthor.Rd
 ## Reading man/export_calendar_to_csv.Rd

@@ -325,10 +325,36 @@ usethis::use_import_from("Matrix", "Matrix")
 
 ```{r}
 #' JSM author names
-#' @format A character vector of 12,628 JSM author names
+#' @format A character vector of 12,628 names from past and present JSMs
 #' @source This data was from the JSM 2022-2024 programs.
 "authors"
 ```
+
+Let's have a separate character vector of authors for this year's JSM:
+
+```{r}
+authors2024 <- jsm2024::talks %>%
+  pull(author) %>%
+  str_split(", ") %>%
+  unlist() %>%
+  unique() %>% 
+  sort()
+```
+
+
+```{r}
+#' JSM 2024 author names
+#' @format A character vector of 5,820 JSM author names
+#' @source This data was from the JSM 2024 program.
+"authors2024"
+```
+
+Let's send this to the package:
+
+```{r}
+usethis::use_data(authors2024)
+```
+
 
 ```{r}
 #' Coauthorship information on JSM authors
