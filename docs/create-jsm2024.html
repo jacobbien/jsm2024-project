@@ -640,16 +640,17 @@ usethis::use_import_from("Matrix", "Matrix")</code></pre>
 #' @source This data was from the JSM 2022-2024 programs.
 "authors"</code></pre>
 <pre><code>## [1] "authors"</code></pre>
-<p>Let’s have a separate character vector of authors for this year’s
+<p>We have a separate character vector of authors for this year’s
 JSM:</p>
-<pre class="r"><code>authors2024 &lt;- jsm2024::talks %&gt;%
-  pull(author) %&gt;%
-  str_split(", ") %&gt;%
-  unlist() %&gt;%
-  unique() %&gt;% 
-  sort()</code></pre>
+<pre class="r"><code>authors2024 &lt;- jsm$authors_thisyear</code></pre>
+<p>We will want to have precomputed recommendations available for
+everyone in <code>authors</code>. This combines everyone who has
+appeared on the JSM program 2022-2024. However, we want these
+recommendations to be about only those people who are actually giving
+talks in 2024. (E.g., it’s not useful to see the name of a coauthor of
+mine if they aren’t presenting at JSM this year!)</p>
 <pre class="r"><code>#' JSM 2024 author names
-#' @format A character vector of 5,820 JSM author names
+#' @format A character vector of 5,816 JSM 2024 author names
 #' @source This data was from the JSM 2024 program.
 "authors2024"</code></pre>
 <pre><code>## [1] "authors2024"</code></pre>
@@ -733,7 +734,7 @@ JSM:</p>
     return(character(0))
   }
   ii_coa &lt;- <a href="create-jsm2024.html#ordered_nz">ordered_nz</a>(jsm2024::coauthor[ii, ])
-  jsm2024::authors[ii_coa]
+  intersect(jsm2024::authors[ii_coa], jsm2024::authors2024)
 }</code></pre>
 <p>And let’s put in a test.</p>
 <pre class="r"><code>testthat::test_that("<a href="create-jsm2024.html#get_coauthors">get_coauthors</a>() works", {
@@ -763,7 +764,7 @@ JSM:</p>
     # start with author's own cites and follow with those of coauthors:
     ii_cites &lt;- c(ii_cites, setdiff(ii_coa_cites, ii_cites))
   }
-  jsm2024::authors[ii_cites]
+  intersect(jsm2024::authors[ii_cites], jsm2024::authors2024)
 }</code></pre>
 <pre class="r"><code>#' Return the JSM authors that cite this JSM author
 #' 
@@ -789,7 +790,7 @@ JSM:</p>
     # start with author's own cites and follow with those of coauthors:
     ii_cites &lt;- c(ii_cites, setdiff(ii_coa_cites, ii_cites))
   }
-  jsm2024::authors[ii_cites]
+  intersect(jsm2024::authors[ii_cites], jsm2024::authors2024)
 }</code></pre>
 <p>And let’s test these functions.</p>
 <pre class="r"><code>testthat::test_that("get_*_citations() works", {
@@ -988,11 +989,8 @@ that we can have a link to it on our pkgdown site.</p>
 ## Reading LICENSE.md
 ## Writing `404.html`
 ## ── Building function reference ─────────────────────────────────────────────────
-## Writing `reference/index.html`
 ## Reading man/authors.Rd
-## Writing `reference/authors.html`
 ## Reading man/authors2024.Rd
-## Writing `reference/authors2024.html`
 ## Reading man/cites.Rd
 ## Reading man/coauthor.Rd
 ## Reading man/export_calendar_to_csv.Rd

@@ -21,6 +21,8 @@ knitr::opts_chunk$set(
 
 ### Getting started
 
+You can watch a [video demo](https://www.youtube.com/watch?v=-k13d_KsSH0&t=1s) of the shiny app and this R package or read more below.
+
 To install the package:
 
 ```{r, eval = FALSE}
@@ -56,7 +58,7 @@ dplyr::select(schedule, speaker, title)
 
 See `?get_talks` for the other ways you can filter talks.  Finally, you can export this in the ical format, which can be imported into Google Calendar and other standard calendars:
 
-```{r}
+```{r, eval=FALSE}
 jsm2024::export_calendar_to_ics(schedule, file = "jsm-talks.ics")
 ```
 

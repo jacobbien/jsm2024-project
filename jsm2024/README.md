@@ -11,6 +11,10 @@ and similar.
 
 ### Getting started
 
+You can watch a [video
+demo](https://www.youtube.com/watch?v=-k13d_KsSH0&t=1s) of the shiny app
+and this R package or read more below.
+
 To install the package:
 
 ``` r
